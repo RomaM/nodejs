@@ -1,0 +1,29 @@
+form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label,
+.form-control input {
+    margin: 5px 0;
+}
+
+form button {
+    width: 100%;
+    margin: 10px 0 0;
+    color: whitesmoke;
+    cursor: pointer;
+    background: #ff6242;
+    border: 1px solid #ff3a1c;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+form button:hover {
+    opacity: .8;
+}
