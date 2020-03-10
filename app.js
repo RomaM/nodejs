@@ -6,12 +6,15 @@ const path = require('path');
 
 const app = express();
 
-app.engine('hbs', exphbs({
-  extname: "hbs",
-  defaultLayout: "",
-  // layoutsDir: "",
-}));
-app.set('view engine', 'hbs');
+//*** express-handlebars engine configuration ***//
+// app.engine('hbs', exphbs({
+//   extname: "hbs",
+//   defaultLayout: "main-layout",
+//   layoutsDir: "views/layouts",
+// }));
+// app.set('view engine', 'hbs');
+
+app.set('view engine', 'ejs');
 
 //app.set('views', 'views');
 
