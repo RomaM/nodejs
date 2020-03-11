@@ -2,6 +2,8 @@ const express = require('express');
 
 const exphbs = require('express-handlebars');
 
+const notFoundCtrl = require('./controllers/not-found');
+
 const path = require('path');
 
 const app = express();
@@ -29,13 +31,9 @@ const shopRoutes = require('./routes/shop');
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminRoutes.routes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-  res.status(404).render('404', {pageTitle: '404', path: '404'});
-  // .sendFile(path.join(__dirname, 'views', '404.html'));
-
-});
+app.use(notFoundCtrl);
 
 app.listen(3000);
