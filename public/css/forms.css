@@ -8,9 +8,18 @@ form {
     flex-direction: column;
 }
 
-.form-control label,
+.form-control label {
+    margin-top: 5px;
+}
+
 .form-control input {
     margin: 5px 0;
+}
+
+.form-control textarea {
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
 }
 
 form button {
