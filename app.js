@@ -6,6 +6,8 @@ const notFoundCtrl = require('./controllers/not-found');
 
 const path = require('path');
 
+const mongoConnect = require('./util/database');
+
 const app = express();
 
 //*** express-handlebars engine configuration ***//
@@ -36,4 +38,6 @@ app.use(shopRoutes);
 
 app.use(notFoundCtrl);
 
-app.listen(3000);
+mongoConnect((client) => {
+  app.listen(3000);
+});

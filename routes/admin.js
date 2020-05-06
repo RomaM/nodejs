@@ -12,4 +12,10 @@ router.get('/products', adminCtrl.getProducts);
 
 router.post('/add-product', adminCtrl.postAddProduct);
 
+router.get('/edit-product/:productId', adminCtrl.getEditProduct);
+
+router.post('/edit-product', adminCtrl.postEditProduct);
+
+router.post('/delete-product', adminCtrl.postDeleteProduct);
+
 module.exports = router;
