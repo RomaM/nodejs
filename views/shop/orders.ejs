@@ -3,6 +3,23 @@
 <body>
 <%- include('../includes/nav.ejs') %>
 <main>
-    <h1>Orders</h1>
+    <% if(orders.length > 0) { %>
+        <div class="grid">
+            <% orders.map((order) => {%>
+                <article class="order-item">
+                    <header class="order-item__header">
+                        <h1 class="order-item__title"><%= order._id %></h1>
+                    </header>
+                    <ul class="order-item__list products">
+                        <% order.products.forEach(product => { %>
+                            <li class="products__item"><%= product.product.title %> (<%= product.quantity%>)</li>
+                        <% }) %>
+                    </ul>
+                </article>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <h1>No orders</h1>
+    <% } %>
 </main>
 <%- include('../includes/end.ejs') %>

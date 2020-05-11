@@ -59,9 +59,10 @@ main {
 .grid {
     display: flex;
     text-align: center;
+    flex-wrap: wrap;
 }
 
-.product-item {
+.grid > * {
     padding: 10px;
     box-shadow:  0 0 2px rgba(0,0,0,.3);
 }
