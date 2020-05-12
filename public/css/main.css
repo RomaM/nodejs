@@ -74,3 +74,24 @@ main {
 .card__image img {
     width: 100%;
 }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid green;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background: green;
+}
