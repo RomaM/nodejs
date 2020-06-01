@@ -45,8 +45,6 @@ body {
 .main-header__item a:hover,
 .main-header__item a:focus,
 .main-header__item a.active {
-    /*color: rgba(7,71,166,.3);*/
-    /*color: #0700a6;*/
     background: #0700a6;
     border-left-color: #002aa6;
     border-right-color: #002aa6;
