@@ -1,3 +1,6 @@
+#MAC folder settings
+.DS_Store
+
 # SDK configs
 .idea/
 
